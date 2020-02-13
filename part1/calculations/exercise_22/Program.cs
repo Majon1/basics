@@ -17,7 +17,7 @@ namespace exercise_22
       Console.WriteLine("Give the third number!");
       string userI = Console.ReadLine();
       int intVa = Convert.ToInt32(userI);
-      double average = (intValue + intV + intVa) / 3.0; //divide by the amount of numbers
+      double average = (intValue + intV + intVa) / 3.0; 
       Console.WriteLine("The average is " + average); 
 
     }
