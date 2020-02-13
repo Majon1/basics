@@ -16,6 +16,7 @@ namespace exercise_21
       int intV = Convert.ToInt32(userIn);
       double average = (intValue + intV) / 2.0; //divide by the amount of numbers
       Console.WriteLine("The average is " + average); 
+      
     }
   }
 }
