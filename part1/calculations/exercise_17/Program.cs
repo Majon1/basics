@@ -13,8 +13,8 @@ namespace exercise_17
       int intValue = Convert.ToInt32(userInput);
       Console.WriteLine("Give the second number!");
       string userIn = Console.ReadLine();
-      int intV = convert.ToInt32(UserIn);
-      Console.WriteLine("The sum is" + (intValue + IntV));
+      int intV = Convert.ToInt32(userIn);
+      Console.WriteLine("The sum is " + (intValue + intV));
    }
   }
 }
