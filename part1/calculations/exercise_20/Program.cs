@@ -15,6 +15,7 @@ namespace exercise_20
       string userIn = Console.ReadLine();
       int intV = Convert.ToInt32(userIn);
       Console.WriteLine(intValue + " * " + intV + " = " + (intValue * intV));
+      //
     }
   }
 }
