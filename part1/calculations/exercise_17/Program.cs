@@ -8,7 +8,13 @@ namespace exercise_17
     {
 
       // Write your code here:
-
-    }
+      Console.WriteLine("Give the first number!");
+      string userInput = Console.ReadLine();
+      int intValue = Convert.ToInt32(userInput);
+      Console.WriteLine("Give the second number!");
+      string userIn = Console.ReadLine();
+      int intV = convert.ToInt32(UserIn);
+      Console.WriteLine("The sum is" + (intValue + IntV));
+   }
   }
 }
