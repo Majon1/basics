@@ -13,7 +13,6 @@ namespace exercise_16
       int intValue = Convert.ToInt32(userInput);
       int seconds = ((60 * 60) * 24);
       Console.WriteLine((seconds) * (intValue));
-      //
     }
   }
 }
