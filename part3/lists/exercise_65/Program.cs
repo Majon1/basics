@@ -13,9 +13,12 @@ namespace exercise_65
         string input = Console.ReadLine();
         if (input == "")
         {
+          int amount = list.Count;
+        Console.WriteLine("In total: " + amount);
           break;
         }
         list.Add(input);
+        
       }
 
     }
