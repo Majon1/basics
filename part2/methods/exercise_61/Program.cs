@@ -7,6 +7,7 @@ namespace exercise_61
     public static void Main(String[] args)
     {
       PrintRightTriangle(4);
+      ChristmasTree(10);
     }
 
     public static void PrintStars(int number)
@@ -30,24 +31,35 @@ namespace exercise_61
     public static void PrintRightTriangle(int size)
     {
       int n = size;
-      int i, j, k;
+      int i;
       for (i = 1; i <= n; i++)
       {
-        for (k = 1 ; k <= i; k++)
-        {//
-          PrintSpaces(n - 1);
-        }
-        for (j = n - i; j >= 1; j--)
-        {
-          PrintStars(j - i);   
-        }
-       Console.WriteLine("");
+        PrintSpaces(n - i);
+        
+        PrintStars(i);   
       }
     }
 
     public static void ChristmasTree(int height)
     {
-
+      int l = height;
+      int i; 
+      int k = 1;
+      int t = 0;
+      
+      for (i = 1; i <= l; i++)
+      {
+        PrintSpaces(l - i);
+        PrintStars(t + i);
+        t++; 
+      }
+      for (k = 1; k <= 2; k++)
+      {
+      PrintSpaces (l - 2);
+      PrintStars (3);
+      }
+     
     }
   }
-}
+  }
+
