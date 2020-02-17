@@ -34,7 +34,7 @@ namespace exercise_61
       for (i = 1; i <= n; i++)
       {
         for (k = 1 ; k <= i; k++)
-        {
+        {//
           PrintSpaces(n - 1);
         }
         for (j = n - i; j >= 1; j--)
