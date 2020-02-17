@@ -50,7 +50,7 @@ namespace exercise_60
     }
 
     public static void PrintTriangle(int size)
-    {
+    {//
       int l;
       int k = size;
       for (l = 0; l <= size; l++)
