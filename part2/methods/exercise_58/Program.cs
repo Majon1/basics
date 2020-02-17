@@ -11,6 +11,10 @@ namespace exercise_58
     }
 
     // Write your method here:
-    
+    public static int Smallest(int number1, int number2)
+    {
+    return Math.Min(number1, number2);
+    }
+  
   }
 }
