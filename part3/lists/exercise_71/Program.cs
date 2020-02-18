@@ -13,6 +13,11 @@ namespace exercise_71
         int input = Convert.ToInt32(Console.ReadLine());
         if (input == -1)
         {
+          Console.WriteLine("Search for?");
+          int find = Convert.ToInt32(Console.ReadLine());
+          if (list.Contains(find))
+          public int FindIndex (find match);
+          Console.WriteLine(find + " is at index " + list.FindIndex(find)); 
           break;
         }
         list.Add(input);
