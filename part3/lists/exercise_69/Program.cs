@@ -34,7 +34,7 @@ namespace exercise_69
         }
         if (numb >= end)
           {
-            Console.WriteLine(numb);
+            Console.WriteLine(numb); ////USE FOREACH!!!
           }
         }
       }
