@@ -13,29 +13,31 @@ namespace exercise_69
         int input = Convert.ToInt32(Console.ReadLine());
         if (input == -1)
         { 
-          Console.WriteLine("From where?");
-          int beginning = Convert.ToInt32(Console.ReadLine());
-          Console.WriteLine("Where to?");
-          int end = Convert.ToInt32(Console.ReadLine());
-          PrintValues(list, beginning, end);
           break;
         }
         list.Add(input);
       }
+      Console.WriteLine("From where?");
+          int beginning = Convert.ToInt32(Console.ReadLine());
+          Console.WriteLine("Where to?");
+          int end = Convert.ToInt32(Console.ReadLine());
+      PrintValues(list, beginning, end);
 
     }
     public static void PrintValues(List<int> list, int beginning, int end)
     {
-      foreach(int number in list)
+      for (int numb = 1; numb <= end; numb++)
       {
-        if (number < beginning)
+        if (numb <= beginning)
         {
-          if (number > end)
+          Console.WriteLine(numb);
+        }
+        if (numb >= end)
           {
-            Console.WriteLine(number);
+            Console.WriteLine(numb);
           }
         }
       }
     }
   }
-}
+
