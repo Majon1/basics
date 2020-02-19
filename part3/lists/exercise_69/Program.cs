@@ -26,7 +26,7 @@ namespace exercise_69
     }
     public static void PrintValues(List<int> list, int beginning, int end)
     {
-      for (int numb = 1; numb <= end; numb++)
+      for (int numb = 1; numb <= end; numb++)//
       {
         if (numb <= beginning)
         {
