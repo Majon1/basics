@@ -17,7 +17,7 @@ namespace exercise_74
         }
         list.Add(input);
       }
-      Console.WriteLine("Search for? ");
+      Console.WriteLine("Search for?");
         string find = Console.ReadLine();
         if (list.Contains(find))
         {
