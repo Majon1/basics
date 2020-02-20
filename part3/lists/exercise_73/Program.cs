@@ -13,8 +13,8 @@ namespace exercise_73
         int input = Convert.ToInt32(Console.ReadLine());
         if (input == -1)
         {
-        return list.Count;
-        break;
+        //return list.Count;
+        //break;
         }
         list.Add(input);
       } 
