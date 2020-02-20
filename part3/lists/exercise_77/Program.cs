@@ -12,7 +12,7 @@ namespace exercise_77
       strings.Add("First");
       strings.Add("Second");
       strings.Add("Third");
-      //int i = strings.Count;
+      
       strings.ForEach(Console.WriteLine);
       RemoveLast(strings);
       strings.ForEach(Console.WriteLine);
@@ -20,13 +20,11 @@ namespace exercise_77
     }
     public static void RemoveLast(List<string> strings)
     { 
-      foreach (string value in strings)
-      {
-        Console.WriteLine(value);
-      }
-      
-      //strings.RemoveAt([i - 1]);
-      //Console.WriteLine([index]);
+     if (string.Count == 0)
+     {
+       return;
+     }
+     string.RemoveAt(0);
     }
   }
 }

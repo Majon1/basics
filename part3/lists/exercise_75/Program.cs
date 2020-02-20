@@ -30,7 +30,7 @@ namespace exercise_75
     }
     public static void PrintNumbersInRange(List<int> numbers, int lowerLimit, int upperLimit)
     { 
-      for (int i = lowerLimit; i <= upperLimit; i++)
+    for (int i = lowerLimit; i <= upperLimit; i++)
         { 
           if (numbers.Contains(i))
           {

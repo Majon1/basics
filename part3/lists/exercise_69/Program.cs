@@ -18,26 +18,24 @@ namespace exercise_69
         list.Add(input);
       }
       Console.WriteLine("From where?");
-          int beginning = Convert.ToInt32(Console.ReadLine());
-          Console.WriteLine("Where to?");
-          int end = Convert.ToInt32(Console.ReadLine());
+      int beginning = Convert.ToInt32(Console.ReadLine());
+      Console.WriteLine("Where to?");
+      int end = Convert.ToInt32(Console.ReadLine());
       PrintValues(list, beginning, end);
 
     }
     public static void PrintValues(List<int> list, int beginning, int end)
     {
-      for (int numb = 1; numb <= end; numb++)//
+      foreach(int input in list)
       {
-        if (numb <= beginning)
-        {
-          Console.WriteLine(numb);
-        }
-        if (numb >= end)
-          {
-            Console.WriteLine(numb); ////USE FOREACH!!!
-          }
-        }
+      if (beginning <= input)
+      {
+      if (input >= end)
+         {
+          Console.WriteLine(input);
+         }
+      }
       }
     }
   }
-
+}
