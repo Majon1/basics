@@ -13,11 +13,21 @@ namespace exercise_73
         int input = Convert.ToInt32(Console.ReadLine());
         if (input == -1)
         {
-        //return list.Count;
-        //break;
+        
+        break;
         }
         list.Add(input);
       } 
+      Console.WriteLine("Sum: " + Sum(list));
+    }
+    public static double Sum(List<int> list)
+    {
+      int sum = 0;
+      foreach(int number in list)
+      {
+        sum = sum + number;
+      }
+      return 1 * sum;
     }
   }
 }
