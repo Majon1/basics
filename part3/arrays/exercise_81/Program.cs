@@ -15,12 +15,12 @@ namespace exercise_81
     public static void PrintNeatly(int[] array)
     {
       
-      for (int i = 0; i < array.Length; i++)
+      for (int i = 0; i < array.Length - 1; i++)
       {
         Console.Write(array[i]);
         Console.Write(", ");
-        
       }
+      Console.WriteLine(array[array.Length - 1]);
       
     }
   }
