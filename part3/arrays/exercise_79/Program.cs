@@ -23,7 +23,7 @@ namespace exercise_79
 
       // Implement the search functionality here
       for (int i = 0; i < array.Length; i++)
-      {
+      {//
 
        if (array = searching)
        {
