@@ -19,12 +19,14 @@ namespace exercise_77
 
     }
     public static void RemoveLast(List<string> strings)
-    { 
-     if (string.Count == 0)
+    { int j = 0;
+    int i = Convert.ToInt32(j);
+    while (i < strings.Count)
      {
-       return;
+      i++;
      }
-     string.RemoveAt(0);
+     strings.RemoveAt(i - 1);
+     return;
     }
   }
 }

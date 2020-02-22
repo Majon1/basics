@@ -26,16 +26,16 @@ namespace exercise_69
     }
     public static void PrintValues(List<int> list, int beginning, int end)
     {
-      foreach(int input in list)
-      {
-      if (beginning <= input)
-      {
-      if (input >= end)
-         {
-          Console.WriteLine(input);
-         }
-      }
-      }
+      foreach (int number in list)
+      
+          if (number >= beginning && number <= end)
+          {
+            Console.WriteLine(number);
+          }
     }
+    
+     
+      
+    
   }
 }

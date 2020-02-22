@@ -30,7 +30,7 @@ namespace exercise_79
        Console.WriteLine(searching + " is at index " + where + ".");
         break;
         }
-        else 
+      else 
         {
         Console.WriteLine(searching + " was not found.");
         }
