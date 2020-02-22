@@ -26,7 +26,7 @@ namespace exercise_79
       for(int number = 0; number < array.Length; number++)
       {
         if (array.Contains(searching))
-        {
+        {//
        Console.WriteLine(searching + " is at index " + where + ".");
         break;
         }
