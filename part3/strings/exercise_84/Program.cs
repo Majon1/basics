@@ -7,7 +7,17 @@ namespace exercise_84
   {
     public static void Main(string[] args)
     {
-
+      Console.Write("Give a string: ");
+      string userinput = Console.ReadLine();
+      if (userinput == "true")
+      {
+        Console.Write("You got it right!");
+      }
+      else
+      {
+        Console.Write("Try again!");
+      }
+      Console.WriteLine("");
 
     }
   }
