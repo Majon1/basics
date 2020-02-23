@@ -7,7 +7,7 @@ namespace exercise_91
   {
     public static void Main(string[] args)
     {
-     
+     int count = 0;
       while (true)
       {
         string input = Console.ReadLine();
@@ -16,10 +16,10 @@ namespace exercise_91
           break;
         }
         string[] pieces = input.Split(",");
-        string nameLength = pieces[0].Length;
+        count = Convert.ToInt32(pieces[1]);
         
       }
-      Console.WriteLine("Age of the oldest: " + nameLength);
+      Console.WriteLine("Name of the oldest: " + pieces[0]);
 
     }
   }
