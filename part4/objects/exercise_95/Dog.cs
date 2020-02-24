@@ -7,6 +7,6 @@ namespace exercise_95
         private string name;
         private string breed;
         private int age; 
-    }
+    }//
 
 }
