@@ -2,7 +2,7 @@ using System;
 
 namespace exercise_97
 {
-    private class Whistle
+    public class Whistle
     {
         private string sound;
         public Whistle(string whistleSound)
