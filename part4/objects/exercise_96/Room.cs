@@ -2,7 +2,7 @@ using System;
 
 namespace exercise_96
 {
-    private class Room
+    public class Room
     {
         private string code;
         private int seats;
