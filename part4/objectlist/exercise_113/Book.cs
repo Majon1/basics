@@ -4,16 +4,22 @@ namespace exercise_113
 {
     public class Book
     {
-        public string name { get; set; }
+        public string title { get; set; }
         public int pages { get; set; }
         public int publicationYear { get; set; }
 
-        public Book(string name, int pages, int year)
+        public Book(string title, int pages, int publicationYear)
         {
-            this.name = name;
+            this.title = title;
             this.pages = pages;
-            this.publicationYear = year;
+            this.publicationYear = publicationYear;
         }
+
+        public override string ToString()
+        {
+            return this.title + ", " + this.pages + " pages, " + this.publicationYear;
+        }
+        
         
     }
 }

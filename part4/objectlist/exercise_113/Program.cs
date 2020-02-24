@@ -13,8 +13,8 @@ namespace exercise_113
       while (true)
       {
         Console.Write("Name: ");
-        string name = Console.ReadLine();
-        if (name == "")
+        string title = Console.ReadLine();
+        if (title == "")
         {
           break;
         }
@@ -23,9 +23,22 @@ namespace exercise_113
         Console.Write("Publication year: ");
         int year = Convert.ToInt32(Console.ReadLine());
 
-        list.Add(new Book (name, pages, year));
+        list.Add(new Book(title, pages, year));
+      }
+      Console.WriteLine();
+      Console.Write("What information will be printed? ");
+      string userinput = Console.ReadLine();
 
-        
+      foreach (Book item in list)
+      {
+      if (userinput == "everything")
+      {
+        Console.WriteLine(item.title + ", " + item.pages + " pages, " + item.publicationYear);
+      }
+      if  (userinput == "title")
+      {
+        Console.WriteLine(item.title);
+      }
       }
 
     }
