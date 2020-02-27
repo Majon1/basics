@@ -23,7 +23,21 @@ namespace exercise_129
     // BEGIN SOLUTION
     public override bool Equals(object compared)
     {
- 
+      if (this == compared)
+      {
+        return true;
+      }
+      if (compared == null)
+      {
+        return false;
+      }
+      Song comparedSong = (Song)compared;
+      if (this.artist == comparedSong.artist &&
+       this.name == comparedSong.name &&
+        this.durationInSeconds == comparedSong.durationInSeconds);
+      {
+        return true;
+      }
       return false;
     }
     // END SOLUTION
