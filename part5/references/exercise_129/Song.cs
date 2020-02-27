@@ -27,7 +27,7 @@ namespace exercise_129
       {
         return true;
       }
-      if (compared == null)
+      if ((compared == null) || !this.GetType().Equals(compared.GetType()))
       {
         return false;
       }
