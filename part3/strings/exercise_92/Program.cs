@@ -7,7 +7,12 @@ namespace exercise_92
   {
     public static void Main(string[] args)
     {
-     int count = 0;
+     int oldest = 2020;
+     int length = 0;
+     string longest = "";
+     int age = 0;
+     int nameLength = 0;
+
       while (true)
       {
         string input = Console.ReadLine();
@@ -16,10 +21,21 @@ namespace exercise_92
           break;
         }
         string[] pieces = input.Split(",");
-        count = Convert.ToInt32(pieces[1]);
-        
+        if (Convert.ToInt32(pieces[1]) < oldest)
+        {
+          oldest = Convert.ToInt32(pieces[1]);
+        }
+        string word = pieces[0];
+        length = word.Length;
+        if (length > nameLength)
+        {
+          nameLength = length;
+          longest = pieces[0];
+        }
       }
-      Console.WriteLine("Age of the oldest: " + count);
+      age = 2020 - oldest;
+      Console.WriteLine("Longest name: " + longest);
+      Console.WriteLine("Highest age: " + age);
 
     }
   }
