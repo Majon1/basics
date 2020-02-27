@@ -7,7 +7,11 @@ namespace exercise_124
     public static void Main(string[] args)
     {
       // Implement your program here!
+      Names john = new Names ("john", 2);
+      john.GrowOlder();
 
+      john = null;
+      john.GrowOlder();
       
     }
   }
