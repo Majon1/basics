@@ -17,21 +17,41 @@ namespace exercise_132
     {
       // Do something here
 
+      if (this.day == 30)
+      {
+        this.day = 1;
+        if (this.month == 12)
+        {
+        this.month = 1;
+        this.year++;
+        }
+        else
+        {
+        this.month++;
+        }
+      }
+      else
+      {
+        this.day++;
+      }
     }
 
     public void Advance(int howManyDays)
     {
       // Do something here
+      for (int i = 0; i < howManyDays; i++)
+      {
+        this.Advance();
+      }
     }
 
     public SimpleDate AfterNumberOfDays(int days)
     {
-      SimpleDate newDate = new SimpleDate(/* Do something here?*/);
+      SimpleDate newDate = new SimpleDate(this.day, this.month, this.year);
       // Do something here
-
+      newDate.Advance(days);
       return newDate;
     }
-
 
     public override string ToString()
     {
