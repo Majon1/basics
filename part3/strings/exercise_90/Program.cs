@@ -7,7 +7,8 @@ namespace exercise_90
   {
     public static void Main(string[] args)
     {
-      int count = 0;
+      List<string> person = new List<string>();
+      int oldest = 0;
       while (true)
       {
         string input = Console.ReadLine();
@@ -16,10 +17,13 @@ namespace exercise_90
           break;
         }
         string[] pieces = input.Split(",");
-        count = Convert.ToInt32(pieces[1]);
+        if (Convert.ToInt32(pieces[1]) > oldest)
+        {
+          oldest = Convert.ToInt32(pieces[1]);
+        }
         
       }
-      Console.WriteLine("Age of the oldest: " + count);
+      Console.WriteLine("Age of the oldest: " + oldest);
 
     }
   }
