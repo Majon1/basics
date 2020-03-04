@@ -34,7 +34,7 @@ namespace exercise_129
       Song comparedSong = (Song)compared;
       if (this.artist == comparedSong.artist &&
        this.name == comparedSong.name &&
-        this.durationInSeconds == comparedSong.durationInSeconds);
+        this.durationInSeconds == comparedSong.durationInSeconds)
       {
         return true;
       }
