@@ -20,20 +20,15 @@ namespace exercise_133
 
     public Money Plus(Money addition)
     {
-      Money newMoney = new Money(this.euros, this.cents);
+      //Money newMoney = new Money(this.euros+addition.euros, this.cents+addition.cents);
       // create a new Money object that has the correct worth
-      newMoney.euros += addition.euros;
-      newMoney.cents += addition.cents;
-      if (newMoney.cents > 99)
-      {
-        newMoney.euros++;
-        newMoney.cents = newMoney.cents - 100;
-        //newMoney.euros = newMoney.euros + newMoney.cents / 100;
-        //newMoney.cents = newMoney.cents % 100;
-        //
-      }
+      int eurosadded = this.euros + addition.euros;
+      int centsadded = this.cents + addition.cents;
+      Money newMoney = new Money(eurosadded, centsadded);
+
       // return the new Money object
       return newMoney;
+      //return new Money(this.euros + addition.euros, this.cents + addition.cents)
     }
 
     public Money Minus(Money decreaser)
@@ -42,14 +37,15 @@ namespace exercise_133
       // create a new Money object that has the correct worth
       newMoney.euros -= decreaser.euros;
       newMoney.cents -= decreaser.cents;
-      if (newMoney.euros < 0)
-      {
-        newMoney.euros = newMoney.cents = 0;
-      }
       if (newMoney.cents < 0)
       {
+        newMoney.cents = 100 + newMoney.cents;
         newMoney.euros--;
-        newMoney.cents = newMoney.cents + 100;
+      }  
+      if (newMoney.euros < 0)
+      {
+        newMoney.euros = 0;
+        newMoney.cents = 0;
       }
       // return the new Money object
       return newMoney;
@@ -62,7 +58,7 @@ namespace exercise_133
       {
         return true;
       }
-      if (compared.euros == this.euros && compared.cents > this.cents)
+      else if (this.cents < compared.cents)
       {
        return true;
       }
