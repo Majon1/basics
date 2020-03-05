@@ -3,15 +3,18 @@ using System;
 public class GradeRegister
 {
   private List<int> grades;
+  private List<int> scores;
 
   public GradeRegister()
   {
     this.grades = new List<int>();
+    this.scores = new List<int>();
   }
 
   public void AddGradeBasedOnPoints(int points)
   {
     this.grades.Add(PointsToGrades(points));
+    this.scores.Add(points);
   }
 
   public int NumberOfGrades(int grade)
@@ -59,20 +62,23 @@ public class GradeRegister
 
   public double AverageOfGrades()
   { 
-    int sum = 0;
-    foreach (int grade in grades)
+    double sum = 0.00;
+    foreach (double grade in this.grades)
     {
     if (grade <= 5 && grade > 0)
     {
     sum = sum + grade;
     }
     }
-    if (grades.Count == 0)
+    if (this.grades.Count == 0)
     {
     return -1;
     }
-    double average = (sum / grades.Count);
-    return average;
+    else
+    {
+     return Math.Round((sum / this.grades.Count), 2);
+    //return Math.Round(((double)sum / grades.Count), 2);
+    }
 
     // Hint! You don't need to round the -1, but you do need it for all the other results...
     //return Math.Round(-1.0, 2);
@@ -80,7 +86,19 @@ public class GradeRegister
   }
   public double AverageOfPoints()
   {
+    double summa = 0.00;
+    foreach (double points in this.scores)
+    {
+      summa = summa + points;
+    }
+    if (this.scores.Count == 0)
+    {
+    return -1;
+    }
+    else 
+    {
+     return Math.Round(summa / this.scores.Count, 2);
+   // return Math.Round(-1.0, 2);
 
-    return Math.Round(-1.0, 2);
   }
-}
+}}
