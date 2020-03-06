@@ -82,19 +82,17 @@ public class GradeRegister
   }
   public double AverageOfPoints()
   {
-    double summa = 0.00;
-    foreach (double points in this.scores)
-    {
-      summa = summa + points;
-    }
     if (this.scores.Count == 0)
     {
     return -1;
     }
-    else 
+    int sum = 0;
+    foreach (int score in scores)
     {
-     return Math.Round(summa / this.scores.Count, 2);
+    sum += score;
+    }
+    double average = (double)sum / this.scores.Count;
+    return Math.Round(average, 2);
    // return Math.Round(-1.0, 2);
     }
   }
-}

@@ -11,10 +11,10 @@ namespace exercise_134
 
       UserInterface ui = new UserInterface(register);
       ui.Start();
-      register.AddGradeBasedOnPoints(93);
+     /* register.AddGradeBasedOnPoints(93);
       register.AddGradeBasedOnPoints(91);
       register.AddGradeBasedOnPoints(92);
-      register.AddGradeBasedOnPoints(88);
+      register.AddGradeBasedOnPoints(88);*/
 
       Console.WriteLine("The average of points: " + register.AverageOfPoints());
       Console.WriteLine("The average of grades: " + register.AverageOfGrades());
