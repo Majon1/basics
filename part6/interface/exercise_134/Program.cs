@@ -15,6 +15,9 @@ namespace exercise_134
       register.AddGradeBasedOnPoints(91);
       register.AddGradeBasedOnPoints(92);
       register.AddGradeBasedOnPoints(88);
+
+      //Console.WriteLine("The average of points: " + register.AverageOfPoints());
+      //Console.WriteLine("The average of grades: " + register.AverageOfGrades());
     }
   }
 }

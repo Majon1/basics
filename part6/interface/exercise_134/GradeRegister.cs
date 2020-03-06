@@ -62,23 +62,19 @@ public class GradeRegister
 
   public double AverageOfGrades()
   { 
-    double sum = 0.00;
-    foreach (double grade in this.grades)
-    {
-    if (grade <= 5 && grade > 0)
-    {
-    sum = sum + grade;
-    }
-    }
     if (this.grades.Count == 0)
     {
     return -1;
     }
-    else
+    int sum = 0;
+    foreach (int grade in grades)
     {
-     return Math.Round((sum / this.grades.Count), 2);
-    //return Math.Round(((double)sum / grades.Count), 2);
+    sum += grade;
     }
+    double average = (double)sum / this.grades.Count;
+    return Math.Round(average, 2);
+    //return Math.Round(((double)sum / grades.Count), 2);
+  
 
     // Hint! You don't need to round the -1, but you do need it for all the other results...
     //return Math.Round(-1.0, 2);
@@ -99,6 +95,6 @@ public class GradeRegister
     {
      return Math.Round(summa / this.scores.Count, 2);
    // return Math.Round(-1.0, 2);
-
+    }
   }
-}}
+}

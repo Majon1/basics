@@ -17,7 +17,7 @@ namespace exercise_134
       PrintGradeDistribution();
     }
 
-    public void ReadPoints()
+   public void ReadPoints()
     {
       while (true)
       {
