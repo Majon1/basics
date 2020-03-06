@@ -18,12 +18,7 @@ namespace exercise_136
     // Do something here
     public static void HowManyNames(Person person)
     {
-     // string[] pieces = System.Text.RegularExpressions.Regex.Split(person.ToString(), @"\s+");
-
-
-      
-      string[] pieces = Person.Split(" "); 
-      Console.WriteLine(person.ToString() + " has " + pieces.Length + " names.");
+      Console.WriteLine(person + " has " + person.ToString().Split().Length + " names.");
     }
   }
 }
