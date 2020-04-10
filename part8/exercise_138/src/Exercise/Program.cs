@@ -8,7 +8,7 @@ namespace Exercise
     public static void Main(string[] args)
     {
       // Do something here
-
+      test
       }
     }
   }
