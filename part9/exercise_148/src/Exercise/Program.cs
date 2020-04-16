@@ -16,9 +16,9 @@ namespace Exercise
 
       Console.WriteLine();
 
-      c.APrint();
-      c.BPrint();
-      c.CPrint();
+     c.APrint();
+     c.BPrint();
+     c.CPrint();
     }
   }
 }
