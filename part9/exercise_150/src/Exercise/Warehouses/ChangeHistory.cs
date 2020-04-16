@@ -8,22 +8,29 @@ namespace Exercise
 
     public ChangeHistory()
     {
-
+      this.history = new List<int>();
     }
 
     public void Add(int status)
     {
-
+      this.history.Add(status);
     }
 
     public void Clear()
     {
-
+      this.history.Clear();
     }
 
     public int MaxValue()
-    {
-      return 0;
+    { 
+      if (this.history.Count > 0)
+      {
+      int max = history.Max();
+      }
+      else 
+      {
+        return 0;
+      }
     }
 
     public int MinValue()
@@ -33,7 +40,7 @@ namespace Exercise
 
     public override string ToString()
     {
-      return "";
+      return "Current: " + base.ToString() + " Min: " + " Max: ";
     }
   }
 }
