@@ -7,7 +7,7 @@ namespace Exercise
     public List<Item> list;
     private int capacity;
     
-    public BoxWithMaxWeight(string name, int capacity) : base()
+    public BoxWithMaxWeight(int capacity)
     {
       this.capacity = capacity;
       this.list = new List<Item>();
