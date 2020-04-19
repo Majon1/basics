@@ -1,29 +1,40 @@
 namespace Exercise
 {
+  using System.Linq;
   using System.Collections.Generic;
   public class BoxWithMaxWeight : Box
   {
-    public int capacity { get; set; }
+    public List<Item> list;
+    private int capacity;
+    
     public BoxWithMaxWeight(string name, int capacity) : base()
     {
       this.capacity = capacity;
+      this.list = new List<Item>();
     }
 
     public override void Add(Item item)
     {
-     if (base.item < this.capacity)
+     if (item.weight < this.capacity)
      {
-       Add;
-     }
-     else
-     {
-       return 0;
+       int sumofObjectPropertiesInList = list.Sum(item => item.weight);
+       if (sumofObjectPropertiesInList < this.capacity)
+       {
+         list.Add(item);
+       }
      }
     }
 
     public override bool IsInBox(Item item)
     {
-      return false;
+      if (list.Contains(item))
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
     }
   }
 }
