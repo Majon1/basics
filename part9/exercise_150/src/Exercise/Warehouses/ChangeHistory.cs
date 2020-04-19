@@ -1,5 +1,6 @@
 namespace Exercise
 {
+  using System.Linq;
   using System;
   using System.Collections.Generic;
   public class ChangeHistory
@@ -23,24 +24,28 @@ namespace Exercise
 
     public int MaxValue()
     { 
+      int max = 0;
       if (this.history.Count > 0)
       {
-      int max = history.Max();
+        max = this.history.Max();
       }
-      else 
-      {
-        return 0;
-      }
+      return max;
     }
 
     public int MinValue()
     {
-      return 0;
+      int min = 0;
+      if (this.history.Count > 0)
+      {
+       min = this.history.Min();
+      }
+      return min;
     }
 
     public override string ToString()
     {
-      return "Current: " + base.ToString() + " Min: " + " Max: ";
+      int lastStatus = this.history[this.history.Count -1];
+      return "Current: " + lastStatus + " Min: " + MinValue() + " Max: " + MaxValue();
     }
   }
 }

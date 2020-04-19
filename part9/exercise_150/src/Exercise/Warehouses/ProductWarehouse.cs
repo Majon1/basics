@@ -2,7 +2,7 @@ namespace Exercise
 {
   public class ProductWarehouse : Warehouse
   {
-    public string productName { get; set; }
+    public string productName;
 
     public ProductWarehouse(string productName, int capacity) : base(capacity)
     {
@@ -11,7 +11,7 @@ namespace Exercise
 
     public override string ToString()
     {
-      return this.productName + ": balance:" + this.capacity + ", space left " + base.HowMuchSpaceLeft();
+      return this.productName + ": " + base.ToString();
     }
   }
 }
