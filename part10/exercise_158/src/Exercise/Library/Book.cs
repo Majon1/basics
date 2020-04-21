@@ -9,7 +9,8 @@ namespace Exercise
 
     public Book(string name, int age)
     {
-      // Fill in the blanks
+      this.name = name;
+      this.age = age;
     }
 
 
@@ -22,10 +23,22 @@ namespace Exercise
 
     public int CompareTo(Book other)
     {
-
-      // Do some magic here
-      return 0;
+      if (other == null)
+      {
+        return 1;
+      }
+      if (this.age == other.age)
+      {
+        return this.name.CompareTo(other.name);
+      }
+      else if (this.age > other.age)
+      {
+        return 1;
+      }
+      else
+      {
+        return -1;
+      }
     }
-
   }
 }
