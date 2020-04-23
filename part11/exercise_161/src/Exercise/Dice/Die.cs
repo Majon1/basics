@@ -14,8 +14,8 @@ namespace Exercise
     }
     public int ThrowDie()
     { 
-        int randomNumber = this.random.Next(this.numberOfFaces);
-        return randomNumber + 1;
+        int randomNumber = random.Next(1, this.numberOfFaces + 1);
+        return randomNumber;
       // generate a random number which may be any number
       // between one and the number of faces, and then return it
     }
